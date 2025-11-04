@@ -1,0 +1,27 @@
+{
+  "name": "@involyze/processing",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc && ncp package.json dist/package.json && cd dist && npm install --production"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.126",
+    "@types/node": "^22.0.0",
+    "ncp": "^2.0.0",
+    "typescript": "~5.7.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-appsync": "^3.731.1",
+    "@aws-sdk/client-s3": "^3.731.1",
+    "@aws-sdk/client-secrets-manager": "^3.731.1",
+    "@aws-sdk/client-sfn": "^3.731.1",
+    "@aws-sdk/client-textract": "^3.726.1",
+    "@aws-sdk/s3-request-presigner": "^3.731.1",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.7.9",
+    "chrono-node": "^2.7.7",
+    "mongodb": "^6.12.0",
+    "@aws-sdk/protocol-http": "^3.374.0",
+    "@aws-sdk/signature-v4": "^3.374.0"
+  }
+}

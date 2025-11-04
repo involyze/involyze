@@ -1,0 +1,60 @@
+type Invoice @aws_iam
+@aws_cognito_user_pools {
+  _id: ID
+  jobId: String
+  userId: String
+  shop: String
+  date: InvoiceDate
+  items: [Item]
+  createdAt: String
+}
+
+type InvoiceDate @aws_iam
+@aws_cognito_user_pools {
+  iso: Boolean
+  date: String
+}
+
+type Item @aws_iam
+@aws_cognito_user_pools {
+  name: String
+  quantity: Float
+  price: Float
+}
+
+type JobStatus @aws_iam
+@aws_cognito_user_pools {
+  jobId: ID!
+  status: String!
+  message: String
+}
+
+type Statistic @aws_iam
+@aws_cognito_user_pools {
+  _id: Int
+  date: InvoiceDate
+  totalExpenses: Float
+}
+
+type Mutation @aws_iam {
+  notifyJobStatus(jobId: ID!, status: String!, message: String): JobStatus!
+}
+
+type Query @aws_iam
+@aws_cognito_user_pools {
+  getJobs: [JobStatus]
+  getStatistics(userId: ID!, granularity: String!): [Statistic]
+  getResults(userId: ID!, jobId: String): [Invoice]
+}
+
+type Subscription @aws_iam
+@aws_cognito_user_pools {
+  onJobStatusUpdated(jobId: ID!): JobStatus
+  @aws_subscribe(mutations: ["notifyJobStatus"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Involyze</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // Inject here via postprocessing
+      window.__APP_CONFIG__ = {
+        restApiUrl: '{{UPLOADAPIURL}}',
+        clientId: '{{CLIENTID}}',
+        domainName: '{{DOMAINNAME}}',
+        cognitoDomain: '{{USERPOOLDOMAIN}}',
+        graphqlApiUrl: '{{GRAPHQLURL}}',
+      };
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
