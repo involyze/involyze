@@ -275,7 +275,7 @@ This approach enables true **single-command deployment** via `git push`, elimina
 
 This project was developed in collaboration with an exceptional team, consisting of:
 
-* ... 
+* [Michael Helcig](https://github.com/helcig)
 
 
 
