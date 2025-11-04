@@ -2,7 +2,9 @@
 
 **Serverless Invoice Analysis Platform**
 
-A proof-of-concept serverless application developed as part of the Serverless Computing course at TU Wien (Vienna University of Technology). Involyze demonstrates a fully automated, scale-to-zero architecture for processing and analyzing invoice documents using AWS cloud services.
+Involyze is a platform focused on invoice analytics, designed to extract and analyze data from invoices to support reporting, tracking, and insights. The goal is to make invoice data easy to process and understand.
+
+The main technical focus of Involyze is a pure AWS implementation using a serverless architecture. All components of the system are built around AWS-managed services for data ingestion, storage, and analysis. This approach eliminates the need for traditional servers, reduces operational complexity, and enables the system to scale automatically in response to demand.
 
 > ⚠️ **Note:** This repository is a public mirror created for showcase purposes. The original development was conducted in an internal repository.
 
@@ -277,6 +279,7 @@ This project was developed in collaboration with an exceptional team, consisting
 
 * [Michael Helcig](https://github.com/helcig)
 * [Andreas Hofer](https://github.com/hoferand)
+* [Florian Trimmel](https://github.com/dazwala)
 
 
 
